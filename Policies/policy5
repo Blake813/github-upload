@@ -1,0 +1,34 @@
+{
+    "policyName": "Job1",
+    "policyType": "JobConversion",
+    "definitions": [
+        {
+            "actions": [
+                {
+                    "action": "holdJob"
+                },
+                {
+                    "action": "modifyJob",
+                    "attribute": "jobClass",
+                    "value": "D"
+                }
+            ],
+            "condition": "jobaffinity('N1M1')"
+        },
+        {
+            "actions": [
+                {
+                    "action": "cancelJob"
+                },
+                {
+                    "action": "modifyJob",
+                    "attribute": "SYSAFF",
+                    "value": "addlist(setaff, 'N1M3') "
+                }
+            ],
+            "condition": " jobaffinity('N1M2') "
+        }
+    ],
+    "policyVersion": 1
+}
+

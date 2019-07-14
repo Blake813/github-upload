@@ -1,0 +1,33 @@
+{
+   "policyName":     "z2bEqsL7",
+   "policyVersion":  1,
+   "policyType":     "PPW8J712ZIEWGRA8",
+   "definitions":
+      [
+       {
+           "condition" : "match",
+           "actions" :
+               [
+                 {
+                    "action" : "purgeOutput"
+                 },
+                 {
+                    "action" : "holdJob"
+                 }
+               ]
+       },
+       {
+           "condition" : "sysaff('JESA')",
+           "actions" :
+               [
+                 {
+                    "action" : "holdJob"
+                 },
+                 {
+                    "action" : "purgeOutput"
+                 }
+               ]
+       }
+      ]
+}
+

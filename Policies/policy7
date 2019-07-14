@@ -1,0 +1,22 @@
+{
+   "policyName":     "EqtHpOi6",
+   "policyVersion":  1,
+   "policyType":     "JobConversion",
+   "definitions":
+     [
+       {
+           "condition" : "match('CLASS','CLASS')",
+           "actions" :
+              [
+                 {
+                    "action" : "holdJob"
+                 },
+                 {
+                    "action" : "modifyJob",
+                    "attribute" : "jobClass",
+                    "value" : "D"
+                 }
+              ]
+       }
+      ]
+}

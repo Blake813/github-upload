@@ -1,0 +1,36 @@
+{
+   "policyName":     "jobaff",
+   "policyVersion":  1,
+   "policyType":     "JobConversion",
+   "definitions":
+      [
+        {
+           "condition" : " sysaff              ",
+           "actions" :
+              [
+                 {
+                    "action" : "holdJob"
+                 },
+                 {
+                    "action" : "modifyJob",
+                    "attribute" : "jobClass",
+                    "value" : "D"
+                 }
+              ]
+        },
+        {
+           "condition" : " jobaffinity('N1M2') ",
+           "actions" :
+              [
+                 {
+                    "action" : "cancelJob"
+                 },
+                 {
+                    "action" : "modifyJob",
+                    "attribute" : "SYSAFF",
+                    "value" : "addlist(setaff, 'N1M3') "
+                 }
+              ]
+        }
+      ]
+}

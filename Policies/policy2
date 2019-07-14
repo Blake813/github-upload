@@ -1,0 +1,17 @@
+{
+   "policyName":     "4Job2",
+   "policyVersion":  1,
+   "policyType":     "JobConversion",
+   "definitions":
+      [
+        {
+           "condition" : " match('abcd','bc')           ",
+           "actions" :
+              [
+                 {
+                    "action" : "holdJob"
+                 }
+              ]
+        }
+      ]
+}
